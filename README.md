@@ -15,6 +15,7 @@ With Contentools Integration API, one can make requests to our software through 
 For instance: https://[accountname].contentools.com/api/v1/[endpoint]
 
 Every response will come in JSON format with the data organized in Javascript objects.
+For more information see (https://github.com/aragostinho/ContentTools/blob/master/slnContentToolsApi/Docs/Contentools%20REST%20API%20-%20V1.pdf)[V1 API Documentation].
 
 
 
