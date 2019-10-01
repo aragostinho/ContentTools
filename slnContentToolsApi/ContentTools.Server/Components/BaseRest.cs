@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace ContentTools.Server.Components
 {
-    public class BaseComponent
+    public class BaseRest
     {
         protected ContentToolClient _client;
         protected string _baseRoute;
 
-        public BaseComponent(ContentToolClient client)
+        public BaseRest(ContentToolClient client)
         {
             _client = client;
         }

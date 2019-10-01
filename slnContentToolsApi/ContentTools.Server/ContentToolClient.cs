@@ -1,7 +1,9 @@
 ﻿using ContentTools.Server;
 using ContentTools.Server.Components;
 using ContentTools.Server.Components.Interfaces;
+using ContentTools.Server.Models;
 using ContentTools.Server.Serializers;
+using Newtonsoft.Json;
 using RestSharp;
 using System;
 using System.Collections.Generic;
@@ -17,9 +19,13 @@ namespace ContentTools.API
         private string _token;
         private string _emailAccount;
         private int _projectId;
+        private IDictionary<string, string> _filters = new Dictionary<string,string>(); 
 
-        public IContentPostComponent Posts { get; private set; }
-         
+        public IPublicContent Posts { get; private set; }
+        public IDictionary<string, string> SetFilters {
+            get { return _filters; }
+            set { _filters = value; }
+        }
 
         public ContentToolClient(string baseUrl, string token, string emailAccount, int projectId)
         {
@@ -27,14 +33,14 @@ namespace ContentTools.API
             this._token = token;
             this._emailAccount = emailAccount;
             this._projectId = projectId;
-            this.Posts = new ContentPostComponent(this);
+            this.Posts = new PublicContent(this);
         }
 
         private RestClient CreateClient(string baseUrl)
         {
             var client = new RestClient(baseUrl);
             client.ClearHandlers();
-            client.AddHandler("application/json", NewtonsoftJsonSerializer.Default);
+            client.AddHandler("application/json", () => NewtonsoftJsonSerializer.Default);
 
             return client;
         }
@@ -46,16 +52,20 @@ namespace ContentTools.API
             request.JsonSerializer = serializer != null ? serializer : NewtonsoftJsonSerializer.Default;
             request.AddHeader("Content-Type", "application/json");
 
-            request.AddParameter("username",this._emailAccount);
+            //Default params
+            request.AddParameter("username", this._emailAccount);
             request.AddParameter("api_key", this._token);
             request.AddParameter("project__id__exact", this._projectId);
+
+            //Custom params
+            foreach (var filter in _filters)
+                request.AddParameter(filter.Key, filter.Value);
 
             if (objToBeSerialized != null) request.AddJsonBody(objToBeSerialized);
 
             var client = CreateClient(_baseUrl);
             var response = client.Execute<T>(request);
 
-            //Throw Error if Exception Occurred (Usually network issues)
             if (response.ErrorException != null)
             {
                 const string message = "Error retrieving response.  Check inner details for more info.";
@@ -78,7 +88,11 @@ namespace ContentTools.API
             request.AddParameter("api_key", this._token);
             request.AddParameter("project__id__exact", this._projectId);
 
-            var client = CreateClient(url);   
+            //Custom params
+            foreach (var filter in _filters)
+                request.AddParameter(filter.Key, filter.Value);
+
+            var client = CreateClient(url);
             var response = client.Execute<T>(request);
 
             //Throw Error if Exception Occurred (Usually network issues)

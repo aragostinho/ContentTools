@@ -17,7 +17,7 @@ namespace ContentTools.API.Models.Enums
         webinar,
         [Description("ebook")]
         ebook,
-        [Description("newsletter")]
+        [Description("Newsletter")]
         newsletter
     }
 }

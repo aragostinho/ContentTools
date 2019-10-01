@@ -6,19 +6,14 @@ using System.Text;
 
 namespace ContentTools.API.Models
 {
-    public class ContentPost
+    [JsonObject("data")]
+    public class ObjectData
     {
         [JsonProperty("id")]
         public int Id { get; set; }
-
-        [JsonProperty("categoryId")]
-        public int CategoryId { get; set; }
-
+        
         [JsonProperty("title")]
         public string Title { get; set; }
-
-        [JsonProperty("ideaTitle")]
-        public string IdeaTitle { get; set; }
 
         [JsonProperty("wpPostSlug")]
         public string WpPostSlug { get; set; }
@@ -42,10 +37,6 @@ namespace ContentTools.API.Models
         public ContentType ContentType { get; set; }
 
         [JsonProperty("dateCreated")]
-        public DateTime DateCreated { get; set; }
-
-        [JsonProperty("lastUpdated")]
-        public DateTime LastUpdated { get; set; } 
-
+        public DateTime DateCreated { get; set; } 
     }
 }

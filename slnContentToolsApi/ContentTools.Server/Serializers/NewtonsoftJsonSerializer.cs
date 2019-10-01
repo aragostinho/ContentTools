@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ContentTools.Server.Serializers
 {
-    public class NewtonsoftJsonSerializer : IJsonSerializer
+    public class NewtonsoftJsonSerializer : ISerializer, IDeserializer
     {
         private Newtonsoft.Json.JsonSerializer serializer;
 
@@ -35,20 +35,24 @@ namespace ContentTools.Server.Serializers
         {
             using (var stringWriter = new StringWriter())
             {
-                var jsonTextWriter = new JsonTextWriter(stringWriter);
-                serializer.Serialize(jsonTextWriter, obj);
-                return stringWriter.ToString();
+                using (var jsonTextWriter = new JsonTextWriter(stringWriter))
+                {
+                    serializer.Serialize(jsonTextWriter, obj);
+
+                    return stringWriter.ToString();
+                }
             }
         }
 
         public T Deserialize<T>(RestSharp.IRestResponse response)
         {
-            var content = response.Content;
-
+            var content = response.Content; 
             using (var stringReader = new StringReader(content))
             {
-                var jsonTextReader = new JsonTextReader(stringReader);
-                return serializer.Deserialize<T>(jsonTextReader);
+                using (var jsonTextReader = new JsonTextReader(stringReader))
+                {
+                    return serializer.Deserialize<T>(jsonTextReader);
+                }
             }
         }
 
@@ -62,20 +66,5 @@ namespace ContentTools.Server.Serializers
                 });
             }
         }
-
-        public static NewtonsoftJsonSerializer Explicit
-        {
-            get
-            {
-                return new NewtonsoftJsonSerializer(new Newtonsoft.Json.JsonSerializer()
-                {
-                    NullValueHandling = NullValueHandling.Include
-                });
-            }
-        }
-    }
-
-    public interface IJsonSerializer : ISerializer, IDeserializer
-    {
     }
 }
