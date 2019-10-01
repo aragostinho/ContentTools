@@ -17,20 +17,16 @@ For more information see [V1 API Documentation](https://github.com/aragostinho/C
 ## About ContentTools .NET SDK
 It's a SDK Rest API  developed in .Net Framework 4.6+ consuming Contentools API Version 1.
 
-### Setup
+### How to setup
  The method ContentToolClient(string baseUrl, string token, string emailAccount, int projectId)
  - baseUrl =  https://[accountname].contentools.com/api/v1/[endpoint]
  - token   = The API Token that needs to configure on ContentTools platform. For more information see [here](https://help.contentools.com/knowledge/how-to-configure-an-access-token-for-contentools-api-integration).
  - emailAccount = Your email account on Content Tools platform.
  - projectId = Your content project id on Content Tools. 
 
-In ContentTools.Client console project you can find a good example using appSettings keys:
-*<add key="ContentToolsAPIBaseEndpoint" value=""/>*
-*<add key="ContentToolsAPIToken" value=""/>*
-*<add key="ContentToolsAPIEmailAccount" value=""/>*
-*<add key="ContentToolsAPIProjectId" value=""/>*
+In ContentTools.Client console project there is a good example using appSettings keys.
 
-### Using
+### How to use
 All the code is very didactic and clean to understating.
 Enjoy it :)
 
