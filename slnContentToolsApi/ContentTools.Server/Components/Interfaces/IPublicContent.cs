@@ -9,7 +9,7 @@ namespace ContentTools.Server.Components.Interfaces
         Response Get();
         void AddFilter(ContentType contentType);
         void AddFilter(Paginate paginate);
-        void AddFilter(bool getDeletedContents = true);
+        void AddFilter(bool getDeletedContents = false);
         void AddFilter(Status status);
         void AddFilter(DateTime? dategt, DateTime? datelt);
     }
