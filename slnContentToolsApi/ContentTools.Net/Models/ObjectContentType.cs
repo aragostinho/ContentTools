@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace ContentTools.Net.Models.Enums
+namespace ContentTools.Net.Models
 {
-    public enum ContentType
+    public enum ObjectContentType
     {
         [Description("blog-post")]
         blogpost,

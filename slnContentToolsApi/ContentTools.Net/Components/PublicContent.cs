@@ -1,12 +1,9 @@
-﻿using ContentTools.Net.Components.Interfaces;
+﻿using ContentTools.Net.Client;
+using ContentTools.Net.Components.Interfaces;
 using ContentTools.Net.Models;
-using ContentTools.Net.Models.Enums;
 using RestSharp;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ContentTools.Net.Components
 {
@@ -36,7 +33,7 @@ namespace ContentTools.Net.Components
         /// Add content type filter
         /// </summary>
         /// <returns>content_type__component</returns>
-        public void AddFilter(ContentType contentType)
+        public void AddFilter(ObjectContentType contentType)
         {
             _filters.Add(new KeyValuePair<string, string>("content_type__component", contentType.GetDescription()));
         }

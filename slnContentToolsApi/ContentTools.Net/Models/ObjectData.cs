@@ -1,8 +1,5 @@
-﻿using ContentTools.Net.Models.Enums;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ContentTools.Net.Models
 {
@@ -34,7 +31,7 @@ namespace ContentTools.Net.Models
         public Status Status { get; set; }
 
         [JsonProperty("contentTypeComponent")]
-        public ContentType ContentType { get; set; }
+        public ObjectContentType ContentType { get; set; }
 
         [JsonProperty("dateCreated")]
         public DateTime DateCreated { get; set; } 

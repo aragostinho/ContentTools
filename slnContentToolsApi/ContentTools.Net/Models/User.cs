@@ -1,11 +1,7 @@
-﻿using ContentTools.Net.Models.Enums;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Newtonsoft.Json;
 
 namespace ContentTools.Net.Models
-{    
+{
     public class User
     {
         [JsonProperty("id")]
