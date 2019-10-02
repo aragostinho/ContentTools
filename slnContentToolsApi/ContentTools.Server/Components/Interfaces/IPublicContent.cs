@@ -1,8 +1,8 @@
-﻿using ContentTools.Server.Models;
-using ContentTools.Server.Models.Enums;
+﻿using ContentTools.Net.Models;
+using ContentTools.Net.Models.Enums;
 using System;
 
-namespace ContentTools.Server.Components.Interfaces
+namespace ContentTools.Net.Components.Interfaces
 {
     public interface IPublicContent
     {
