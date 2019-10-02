@@ -33,7 +33,7 @@ In ContentTools.Client console project there is a good example using appSettings
 
 ### Returning values
 After setup, the object instanced *ContentToolClient* has the property *Posts* that connects to endpoint *public_content*.
-Using the method *Get()* it's enough to return data from ContentTools.
+Using the method *Get()* it's enough to return contents from ContentTools.
 ``` 
 ContentToolClient client = new ContentToolClient(baseUrl, token, emailAccount, projectId);
 var posts = client.Posts.Get();
@@ -66,8 +66,8 @@ newsletter
 ``` 
 
 #### Paginate filter
-A class with two main properties that possibiliy paginate contents.
-*Limit* to define how many records should be return and *Offset* a number of records to skype
+A class with two main properties that possibiliy paginate data.
+*Limit* to define how many contents should be returned and *Offset* a number of contents to skip.
 ``` 
 public int Limit { get; set; }      
 public int Offset { get; set; }
