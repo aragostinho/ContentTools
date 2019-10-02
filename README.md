@@ -1,5 +1,6 @@
 # ContentTools .NET SDK
 .Net SKD for ContentTools Rest API.
+NuGet Package: https://www.nuget.org/packages/ContentTools.Net/
 
 ## About ContentTools
 It's a CMS platform to centralize  content marketing operation: plan, manage, collaborate, publish. All in one place giving up email threads, spreadsheets, and lack of data. 
