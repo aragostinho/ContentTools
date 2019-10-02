@@ -1,6 +1,5 @@
-﻿using ContentTools.API.Filters;
-using ContentTools.API.Models.Enums;
-using ContentTools.Server.Models;
+﻿using ContentTools.Server.Models;
+using ContentTools.Server.Models.Enums;
 using System;
 
 namespace ContentTools.Server.Components.Interfaces

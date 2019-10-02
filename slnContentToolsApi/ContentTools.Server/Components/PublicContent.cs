@@ -1,8 +1,6 @@
-﻿using ContentTools.API;
-using ContentTools.API.Filters;
-using ContentTools.API.Models.Enums;
-using ContentTools.Server.Components.Interfaces;
+﻿using ContentTools.Server.Components.Interfaces;
 using ContentTools.Server.Models;
+using ContentTools.Server.Models.Enums;
 using RestSharp;
 using System;
 using System.Collections.Generic;

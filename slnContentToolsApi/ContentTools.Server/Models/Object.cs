@@ -1,10 +1,9 @@
-﻿using ContentTools.API.Models.Enums;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ContentTools.API.Models
+namespace ContentTools.Server.Models
 {    
     public class Object
     {

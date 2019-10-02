@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace ContentTools.API.Models.Enums
+namespace ContentTools.Server.Models.Enums
 {
     public enum ContentType
     {

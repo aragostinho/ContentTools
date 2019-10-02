@@ -1,10 +1,10 @@
-﻿using ContentTools.API.Models.Enums;
+﻿using ContentTools.Server.Models.Enums;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ContentTools.API.Models
+namespace ContentTools.Server.Models
 {    
     public class User
     {

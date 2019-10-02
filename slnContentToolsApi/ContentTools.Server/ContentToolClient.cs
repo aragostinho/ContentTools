@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Text;
 
-namespace ContentTools.API
+namespace ContentTools.Server
 {
     public class ContentToolClient
     {

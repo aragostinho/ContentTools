@@ -1,4 +1,4 @@
-﻿using ContentTools.API.Models;
+﻿using ContentTools.Server.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -14,6 +14,6 @@ namespace ContentTools.Server.Models
         public Meta Meta { get; set; }
 
         [JsonProperty("objects")]
-        public IList<API.Models.Object> Objects { get; set; }
+        public IList<Object> Objects { get; set; }
     }
 }
