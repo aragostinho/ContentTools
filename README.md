@@ -4,7 +4,7 @@
 ## About ContentTools
 It's a CMS platform to centralize  content marketing operation: plan, manage, collaborate, publish. All in one place giving up email threads, spreadsheets, and lack of data. 
 
-Futher information: https://contentools.com
+Further information: https://contentools.com
 
 ## About Contentools Integration API Version 1
 With Contentools Integration API, one can make requests to our software through a defined endpoint and retrieve data from their project. As of the API version 1, it is only possible to retrieve data through GET requests as long as it is an authenticated request. The request should be filled in the following format, adjusting with the company name as present in the software URL and desired endpoint.
