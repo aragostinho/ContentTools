@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ContentTools.Server")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("ContentTools.Net")]
+[assembly: AssemblyDescription(".Net SKD for ContentTools Rest API.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ContentTools.Server")]
+[assembly: AssemblyCompany("Magnadev")]
+[assembly: AssemblyProduct("ContentTools.Net")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
