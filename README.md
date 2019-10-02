@@ -12,7 +12,7 @@ With Contentools Integration API, one can make requests to our software through 
 For instance: https://[accountname].contentools.com/api/v1/[endpoint]
 Every response will come in JSON format with the data organized in Javascript objects.
 
-For more information see [V1 API Documentation](https://github.com/aragostinho/ContentTools/blob/master/slnContentToolsApi/Docs/Contentools%20REST%20API%20-%20V1.pdf~).
+For more information see [V1 API Documentation](https://github.com/aragostinho/ContentTools/blob/master/slnContentToolsApi/Docs/Contentools%20REST%20API%20-%20V1.pdf).
 
 ## About ContentTools .NET SDK
 It's a SDK Rest API  developed in .Net Framework 4.6+ consuming Contentools API Version 1.
