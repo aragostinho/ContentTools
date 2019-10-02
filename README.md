@@ -99,10 +99,5 @@ Scheduled = 6
 #### DateTime filter
 A date range with optional startDate and endDate.
 ``` 
-DateTime? dategt, DateTime? datelt
-``` 
-
-### How to use
-All the code is very didactic and clean to understating.
-Enjoy it :)
+DateTime? dategt, DateTime? datelt` 
 
