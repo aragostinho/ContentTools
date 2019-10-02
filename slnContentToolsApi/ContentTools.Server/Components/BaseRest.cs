@@ -1,6 +1,6 @@
 ﻿using RestSharp;
 
-namespace ContentTools.Server.Components
+namespace ContentTools.Net.Components
 {
     public class BaseRest
     {

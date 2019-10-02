@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace ContentTools.Server.Models.Enums
+namespace ContentTools.Net.Models.Enums
 {
     public enum Status : byte
     {

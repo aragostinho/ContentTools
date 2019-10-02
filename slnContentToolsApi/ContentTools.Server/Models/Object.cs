@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ContentTools.Server.Models
+namespace ContentTools.Net.Models
 {    
     public class Object
     {

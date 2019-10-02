@@ -1,5 +1,5 @@
-using ContentTools.Server;
-using ContentTools.Server.Models.Enums;
+using ContentTools.Net;
+using ContentTools.Net.Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.Configuration;

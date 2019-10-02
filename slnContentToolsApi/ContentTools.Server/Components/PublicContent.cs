@@ -1,6 +1,6 @@
-﻿using ContentTools.Server.Components.Interfaces;
-using ContentTools.Server.Models;
-using ContentTools.Server.Models.Enums;
+﻿using ContentTools.Net.Components.Interfaces;
+using ContentTools.Net.Models;
+using ContentTools.Net.Models.Enums;
 using RestSharp;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ContentTools.Server.Components
+namespace ContentTools.Net.Components
 {
     public class PublicContent : BaseRest, IPublicContent
     {

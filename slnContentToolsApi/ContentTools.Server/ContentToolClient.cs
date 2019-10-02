@@ -1,8 +1,8 @@
-﻿using ContentTools.Server;
-using ContentTools.Server.Components;
-using ContentTools.Server.Components.Interfaces;
-using ContentTools.Server.Models;
-using ContentTools.Server.Serializers;
+﻿using ContentTools.Net;
+using ContentTools.Net.Components;
+using ContentTools.Net.Components.Interfaces;
+using ContentTools.Net.Models;
+using ContentTools.Net.Serializers;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Text;
 
-namespace ContentTools.Server
+namespace ContentTools.Net
 {
     public class ContentToolClient
     {

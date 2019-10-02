@@ -1,10 +1,10 @@
-﻿using ContentTools.Server.Models.Enums;
+﻿using ContentTools.Net.Models.Enums;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ContentTools.Server.Models
+namespace ContentTools.Net.Models
 {
     [JsonObject("data")]
     public class ObjectData

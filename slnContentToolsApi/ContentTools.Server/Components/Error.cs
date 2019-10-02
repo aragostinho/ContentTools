@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ContentTools.Server.Components
+namespace ContentTools.Net.Components
 {
     public class Error
     {

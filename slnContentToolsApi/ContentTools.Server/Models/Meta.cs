@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ContentTools.Server.Models
+namespace ContentTools.Net.Models
 {    
     public class Meta
     {

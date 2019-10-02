@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ContentTools.Server.Serializers
+namespace ContentTools.Net.Serializers
 {
     public class NewtonsoftJsonSerializer : ISerializer, IDeserializer
     {

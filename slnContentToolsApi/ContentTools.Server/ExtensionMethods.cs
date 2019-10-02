@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ContentTools.Server
+namespace ContentTools.Net
 {
     public static class ExtensionMethods
     {
