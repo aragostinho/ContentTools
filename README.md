@@ -33,7 +33,7 @@ In ContentTools.Client console project there is a good example using appSettings
 
 ### Returning values
 After setup, the object instanced *ContentToolClient* has the property *Posts* that connects to endpoint *public_content*.
-Using the method *Get()* it's enought to return data from ContentTools.
+Using the method *Get()* it's enough to return data from ContentTools.
 ``` 
 ContentToolClient client = new ContentToolClient(baseUrl, token, emailAccount, projectId);
 var posts = client.Posts.Get();
