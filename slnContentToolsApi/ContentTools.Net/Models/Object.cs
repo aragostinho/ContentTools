@@ -22,6 +22,9 @@ namespace ContentTools.Net.Models
         [JsonProperty("dateCreated")]
         public DateTime DateCreated { get; set; }
 
+        [JsonProperty("publishDate")]
+        public DateTime PublishDate { get; set; } 
+
         [JsonProperty("lastUpdated")]
         public DateTime LastUpdated { get; set; } 
 
