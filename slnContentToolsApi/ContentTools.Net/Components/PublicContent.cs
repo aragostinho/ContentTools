@@ -67,6 +67,15 @@ namespace ContentTools.Net.Components
         {
             foreach (var status in statusArray)
                 _filters.Add(new KeyValuePair<string, string>("status_in", ((byte)status).ToString()));
+        } 
+
+        /// <summary>
+        /// Add limit status (Default is 20)
+        /// </summary>
+        /// <returns>limit</returns>
+        public void AddFilter(int limit)
+        {
+            _filters.Add(new KeyValuePair<string, string>("limit", (limit).ToString()));
         }
 
         /// <summary>

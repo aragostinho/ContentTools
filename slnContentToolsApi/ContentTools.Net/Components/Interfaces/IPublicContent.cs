@@ -11,5 +11,6 @@ namespace ContentTools.Net.Components.Interfaces
         void AddFilter(bool getDeletedContents = false);
         void AddFilter(Status status);
         void AddFilter(DateTime? dategt, DateTime? datelt);
+        void AddFilter(int limit);
     }
 }

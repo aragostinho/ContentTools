@@ -1,6 +1,7 @@
 
 using ContentTools.Net.Client;
 using ContentTools.Net.Models;
+using System;
 using System.Configuration;
 
 namespace ContentTools.Client
@@ -24,6 +25,8 @@ namespace ContentTools.Client
             //client.Posts.AddFilter(DateTime.Now.AddDays(-10), null);
             client.Posts.AddFilter(ObjectContentType.blogpost);
             client.Posts.AddFilter(Status.Published);
+            client.Posts.AddFilter(120);
+            client.Posts.AddFilter(DateTime.Now.AddDays(-60), null);
 
             var posts = client.Posts.Get();
 
