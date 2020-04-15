@@ -49,6 +49,7 @@ void AddFilter(Paginate paginate);
 void AddFilter(bool getDeletedContents = true);
 void AddFilter(Status status);
 void AddFilter(DateTime? dategt, DateTime? datelt)
+void AddFilter(int limit)
 ``` 
 #### ContentType filter
 A Enum with the following definations:
