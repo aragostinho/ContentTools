@@ -70,12 +70,19 @@ namespace ContentTools.Net.Components
         } 
 
         /// <summary>
-        /// Add limit status (Default is 20)
+        /// Add limit status (Default is 20), max secure limit in 40 to prevent server error
         /// </summary>
         /// <returns>limit</returns>
         public void AddFilter(int limit)
         {
-            _filters.Add(new KeyValuePair<string, string>("limit", (limit).ToString()));
+            if (limit <= 40)
+            {
+                _filters.Add(new KeyValuePair<string, string>("limit", (limit).ToString()));
+            }
+            else
+            {
+                throw new Exception("Filter limit exceeded, please set a value up to 40");
+            }
         }
 
         /// <summary>
@@ -89,7 +96,27 @@ namespace ContentTools.Net.Components
 
             if(datelt!=null)
             _filters.Add(new KeyValuePair<string, string>("publish_date__lt", datelt.Value.ToString(("yyyy'-'MM'-'dd'T'HH':'mm':'ss"))));
-        }         
+        }
+
+
+
+        /// <summary>
+        /// Add order_by (Default is 20) to order based on content property and the order type
+        /// </summary>
+        /// <param name="contentProperty">Property of the content.</param>
+        /// <param name="orderType">Set as Ascending or Descending(Default=Ascending)</param>
+        /// <returns>limitorder_by</returns>
+        public void AddOrderBy(ContentProperty contentProperty, OrderType orderType = OrderType.Ascending)
+        {
+            if(orderType == OrderType.Ascending)
+            {
+                _filters.Add(new KeyValuePair<string, string>("order_by", contentProperty.GetDescription()));
+            }
+            else
+            {
+                _filters.Add(new KeyValuePair<string, string>("order_by", $"-{contentProperty.GetDescription()}"));
+            }
+        }
 
         /// <summary>
         /// List contents
