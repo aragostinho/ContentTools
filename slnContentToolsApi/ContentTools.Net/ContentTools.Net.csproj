@@ -54,6 +54,8 @@
     <Compile Include="Components\Interfaces\IPublicContent.cs" />
     <Compile Include="ContentToolClient.cs" />
     <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="Models\ContentProperty.cs" />
+    <Compile Include="Models\OrderType.cs" />
     <Compile Include="Models\Paginate.cs" />
     <Compile Include="Components\PublicContent.cs" />
     <Compile Include="Models\User.cs" />

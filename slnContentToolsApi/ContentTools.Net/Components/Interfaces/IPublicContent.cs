@@ -12,5 +12,6 @@ namespace ContentTools.Net.Components.Interfaces
         void AddFilter(Status status);
         void AddFilter(DateTime? dategt, DateTime? datelt);
         void AddFilter(int limit);
+        void AddOrderBy(ContentProperty contentProperty, OrderType orderType = OrderType.Ascending);
     }
 }
